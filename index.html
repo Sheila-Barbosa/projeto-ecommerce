@@ -90,9 +90,86 @@
                 </ul>
             </nav>
 
-            <div> <p> @2024 - Todos os direitos reservados</p></div>
+            <div>
+                <p> @2024 - Todos os direitos reservados</p>
+            </div>
 
         </footer>
+
+        <!-- [1] -->
+        <div id="modal-1" class="modal" aria-hidden="true">
+
+            <!-- [2] -->
+            <div tabindex="-1" data-micromodal-close>
+
+                <!-- [3] -->
+                <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+
+
+                    <header>
+                        <h2 id="modal-1-title">
+                            Carrinho de compras
+                        </h2>
+
+                        <!-- [4] -->
+                        <button aria-label="Close modal" data-micromodal-close></button>
+                    </header>
+
+                    <div id="modal-1-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Produto</th>
+                                    <th>Descrição</th>
+                                    <th>Preço</th>
+                                    <th>Quantidade</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="./assets/images/camiseta_roxa.jpg"
+                                            alt=" Camiseta Deve em Dobro - Roxa">
+                                    </td>
+                                    <td>
+                                    <td> Camiseta Dev em Dobro - Roxa</td>
+                                    <td> R$ 89,00</td>
+                                    <td> <input type="number" value="1" min="1">                
+                                    </td>
+                                    <td> R$ 89,00</td>
+                                    <td><button id="deletar">Deletar</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <img src="./assets/images/caneca_devemdobro.jpg"
+                                            alt=" Caneca Dev em Dobro - Roxa">
+                                    </td>
+                                    <td>
+                                    <td> Caneca Dev em Dobro - Branca </td>
+                                    <td> R$ 29,00</td>
+                                    <td> <input type="number" value="1" min="1">                
+                                    </td>
+                                    <td> R$ 29,00</td>
+                                    <td><button id="deletar">Deletar</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div>
+                            <span id="total-compra">Total: R$ 0,00 </span>
+                            <button id="finalizar-compra">Finalizar Compra</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+
     </body>
 
     </html>

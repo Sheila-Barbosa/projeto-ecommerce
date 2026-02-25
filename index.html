@@ -14,15 +14,27 @@
 
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/cabecalho.css">
 
     </head>
 
     <body>
-        <header>
-            <a href="/">
-                <img src="./assets/images/logo.svg" alt="Logo Dev em Dobro">
-            </a>
-            <nav>
+        <header class="cabecalho">
+            <div class="header-conteudo">
+                <div class="header-esquerda">
+                
+                <button class="menu-hamburguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a class="logo" href="/">
+                    <img src="./assets/images/logo.svg" alt="Logo Dev em Dobro">
+                </a>
+            </div>
+
+            <nav class="menu-principal">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#sobre">Sobre</a></li>
@@ -31,10 +43,16 @@
                     <li><a href="#contato">Fale conosco</a></li>
                 </ul>
             </nav>
-            <button>
-                <img src="./assets/images/icone_carrinho.svg" alt="Ícone de carrinho de compras">
+
+            <button class="botao-carrinho" data-micromodal-trigger="modal-1">
+                <img src="./assets/images/icone_carrinho.svg" alt="Ícone de carrinho de compras"/>
+                <span id="contador-carrinho">0</span>
             </button>
+            </div>
+            
+
         </header>
+
         <main>
             <section>
                 <ul>

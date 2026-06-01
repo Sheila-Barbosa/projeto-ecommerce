@@ -31,15 +31,7 @@ main .produtos img {
     object-fit: cover;
 }
 
-main .nome figcaption {
-    background-color: var(--cor-cinza-escura);
-    color: var(--cor-neutra-clara);
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    padding: 1.5rem 1.5rem 1.2rem;
-}
-
+main .nome figcaption,
 main .produto figcaption {
     background-color: var(--cor-cinza-escura);
     color: var(--cor-neutra-clara);
@@ -104,8 +96,6 @@ main .informacoes .adicionar-ao-carrinho:hover {
         flex-wrap: wrap;
         gap: 2rem;
     }
-
-    ;
 }
 
 @media (min-width: 1170px) {

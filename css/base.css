@@ -17,3 +17,7 @@ body {
         "main"
         "footer";
 }
+
+html {
+    background-color: var(--cor-neutra-escura);
+}

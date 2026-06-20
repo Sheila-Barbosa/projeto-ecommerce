@@ -1,0 +1,40 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+.modal .is-open {
+    display: block;
+
+}
+
+.modal.container {
+    background-color: var(--cor-neutra-escura);
+    color: var(--cor-neutra-clara);
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 1.2rem;
+    height: 100vh;
+
+}
+
+.modal header {
+    display: flex;
+    justify-self: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+}
+
+.modal header .fechar{
+    background-image: url(../assets/images/icone_fechar.svg);
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

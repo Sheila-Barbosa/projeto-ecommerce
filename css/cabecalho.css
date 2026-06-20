@@ -3,11 +3,6 @@
     padding: 1.8rem 0;
 }
 
-h2, th, span{
-    color: var(--cor-neutra-clara);
-    letter-spacing: 0.1rem;
-}
-
 .cabecalho .menu-principal {
     display: none;
     background-color: var(--cor-neutra-escura);
@@ -114,11 +109,24 @@ h2, th, span{
 
     }
 
+    .menu-hamburguer {
+        display: none;
+    }
+
+    .cabecalho ul li a {
+        gap: 0.85rem;
+
+    }
 }
 
 @media (min-width: 1170px) {
     .cabecalho {
         max-width: 1170px;
         margin: 0 auto;
+    }
+
+    .cabecalho ul li a {
+        gap: 1rem;
+
     }
 }

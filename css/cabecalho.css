@@ -3,6 +3,11 @@
     padding: 1.8rem 0;
 }
 
+h2, th, span{
+    color: var(--cor-neutra-clara);
+    letter-spacing: 0.1rem;
+}
+
 .cabecalho .menu-principal {
     display: none;
     background-color: var(--cor-neutra-escura);

@@ -21,9 +21,9 @@ botoesAdicionarAoCarrinho.forEach((botao) => {
         console.log(existeProduto);
 
         //Se existe produto, incrementar a quantidade
-        If(existeProduto) {
+        if (existeProduto) {
             existeProduto.quantidade += 1;
-        } Else {
+        } else {
             //se não existe, adicionar o produto com a quantidade 1 
             const produto = {
                 id: produtoId,
@@ -36,6 +36,7 @@ botoesAdicionarAoCarrinho.forEach((botao) => {
         }
 
         salvarProdutosNoCarrinho(carrinho);
+        atualizarContadorCarrinho();
 
     });
 });
@@ -49,4 +50,18 @@ function obterProdutosDoCarrinho() {
     return produtos ? JSON.parse(produtos) : [];
 }
 
+//passo 4 - atualizar o contador do carrinho de compras
 
+function atualizarContadorCarrinho() {
+    const carrinho = obterProdutosDoCarrinho();
+    let total = 0;
+
+    carrinho.forEach((produto) => {
+        total += produto.quantidade;
+    });
+
+    document.getElementById('contador-carrinho').textContent = total;
+
+}
+
+atualizarContadorCarrinho();

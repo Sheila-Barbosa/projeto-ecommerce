@@ -11,7 +11,7 @@ botoesAdicionarAoCarrinho.forEach((botao) => {
         const produtoId = elementoProduto.dataset.id;
         const produtoNome = elementoProduto.querySelector('.nome').textContent;
         const produtoImagem = elementoProduto.querySelector('img').getAttribute('src');
-        const produtoPreco = parseFloat(elementoProduto.querySelector('.preco').textContent.replace('R$', '').replace('.', ' ').replace(',', '.'));
+        const produtoPreco = parseFloat(elementoProduto.querySelector('.produtoPreco').textContent.replace('R$', '').replace('.', ' ').replace(',', '.'));
 
         //buscar a lista de produtos do localstorage
         const carrinho = obterProdutosDoCarrinho();
@@ -37,6 +37,7 @@ botoesAdicionarAoCarrinho.forEach((botao) => {
 
         salvarProdutosNoCarrinho(carrinho);
         atualizarContadorCarrinho();
+        renderizarTabelaCarrinho();
 
     });
 });
@@ -65,3 +66,28 @@ function atualizarContadorCarrinho() {
 }
 
 atualizarContadorCarrinho();
+
+//passo 5 - renderizar a tabela do carrinho de compras
+function renderizarTabelaCarrinho() {
+    const produtos = obterProdutosDoCarrinho();
+    const corpoTabela = document.querySelector('#modal-1-content table tbody');
+    corpoTabela.innerHTML = ""; // limpar tabela antes de renderizar 
+
+    produtos.forEach((produto) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td class="td-produto">
+        <img
+        src="${produto.imagem}"
+        alt="${produto.nome}"
+        />
+        <td> ${produto.nome} </td>
+                                <td class="td-preco-unitario"> R$ ${produto.preco.toFixed(2).replace('.', ',')}</td>
+                                <td class="td-quantidade"> <input type="number" value="${produto.quantidade}" min="1"/>
+                                </td>
+                                <td class="td-preco-total"> R$ ${produto.preco.toFixed(2).replace('.', ',')}</td>
+                                <td><button class="btn-remover" data-id="${produto.id}" id="deletar"></button></td>`;
+        corpoTabela.appendChild(tr);
+    });
+};
+
+renderizarTabelaCarrinho();

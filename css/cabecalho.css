@@ -54,14 +54,14 @@
 }
 
 .menu-hamburguer {
-    width: 24px;
-    height: 24px;
-    background-color: transparent;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color:transparent;
     border: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 0.3rem;
+    gap: 0.2rem;
     cursor: pointer;
 }
 
@@ -97,7 +97,7 @@
 
 }
 
-@media (min-width: 940px) {
+@media (min-width: 720px) {
     .cabecalho .menu-principal {
         display: block;
         position: static;
@@ -119,7 +119,7 @@
     }
 }
 
-@media (min-width: 1170px) {
+@media (min-width:1170px) {
     .cabecalho {
         max-width: 1170px;
         margin: 0 auto;

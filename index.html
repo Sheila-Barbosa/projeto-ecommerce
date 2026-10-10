@@ -143,42 +143,93 @@
         </footer>
 
         <div id="modal-1" class="modal" aria-hidden="true">
-            <div class="modal-overlay" tabindex="-1" data-micromodal-close>
-                <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                    <header class="modal-header">
-                        <h2 id="modal-1-title">Carrinho de compras</h2>
-                        <button class="fechar" type="button" aria-label="Fechar carrinho"
-                            data-micromodal-close></button>
-                    </header>
+            <div tabindex="-1">
 
-                    <div id="modal-1-content">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th class="th-produto">Produto</th>
-                                    <th class="th-descricao">Descrição</th>
-                                    <th>Preço</th>
-                                    <th>Quantidade</th>
-                                    <th class="th-total">Total</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
 
-                        <div class="container-preco">
-                            <span id="total-carrinho">Total: R$ 0,00</span>
-                            <button id="finalizar-compra" type="button">Finalizar Compra</button>
-                        </div>
+            <div class="container" 
+            role="dialog" 
+            aria-modal="true" aria-labelledby="modal-1-title">
+
+
+                <header>
+                    <h2 id="modal-1-title">
+                        Carrinho de compras
+                    </h2>
+
+
+                    <button class="fechar" 
+                    aria-label="Close modal" 
+                    data-micromodal-close
+                    ></button>
+
+                </header>
+
+                <div id="modal-1-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="th-produto">Produto</th>
+                                <th class="th-descricao">Descrição</th>
+                                <th>Preço</th>
+                                <th>Quantidade</th>
+                                <th class="th-total">Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td-produto">
+                                    <img src="./assets/images/camiseta_roxa.jpg" alt=" Camiseta Deve em Dobro - Roxa">
+                                </td>
+                                <td class="td-descricao"> Camiseta Dev em Dobro - Roxa</td>
+                                <td class="td-preco-unitario"> R$ 89,00</td>
+                                <td class="td-quantidade"> <input type="number" value="1" min="1">
+                                </td>
+                                <td class="td-preco-total"> R$ 89,00</td>
+                                <td><button class="btn-remover" id="deletar"></button></td>
+                            </tr>
+
+                            <tr>
+                                <td class="td-produto">
+                                    <img src="./assets/images/caneca_devemdobro.jpg" alt=" Caneca Dev em Dobro - Roxa">
+                                </td>
+                                <td class="td-descricao"> Caneca Dev em Dobro - Branca </td>
+                                <td class="td-preco-unitario"> R$ 29,00</td>
+                                <td class="td-quantidade"> <input type="number" value="1" min="1">
+                                </td>
+                                <td class="td-preco-total"> R$ 29,00</td>
+                                <td><button class="btn-remover" id="deletar"></button></td>
+                            </tr>
+                            <tr>
+                                <td class="td-produto">
+                                    <img src="./assets/images/caneca_devemdobro.jpg" alt=" Caneca Dev em Dobro - Roxa">
+                                </td>
+                                <td class="td-descricao"> Caneca Dev em Dobro - Branca </td>
+                                <td class="td-preco-unitario"> R$ 29,00</td>
+                                <td class="td-quantidade"> <input type="number" value="1" min="1">
+                                </td>
+                                <td class="td-preco-total"> R$ 29,00</td>
+                                <td><button class="btn-remover" id="deletar"></button></td>
+                        </tbody>
+                    </table>
+
+                    <div>
+                        <span class="container-preco" id="total-carrinho">Total: R$ 0,00 </span>
+                        <button id="finalizar-compra">Finalizar Compra</button>
                     </div>
                 </div>
+
+            </div>
+            <div id="modal-1" class="modal" aria-hidden="true">
+
             </div>
         </div>
 
         <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 
         <script src="./js/carrinho.js"></script>
-        <script src="./js/modal.js"></script>
+        <script src="./js/modal-carrinho.js"></script>
+        <script src="./js/menu.js"></script>
 
     </body>
 
